@@ -26,7 +26,7 @@ type CategoryData = {
 };
 
 function kLargestCategories(files: FileData[], k: number): string[] {
-    let categories: CategoryData[] = [];
+    const categories: CategoryData[] = [];
     files.forEach(file => {
         file.categories.forEach(category => {
             let categoryData = categories.find(c => c.name === category);
@@ -52,17 +52,37 @@ function kLargestCategories(files: FileData[], k: number): string[] {
  */
 
 type ParentFile = {
-    id: number,
+    file: FileData,
     totalSize: number
 };
 
+// Recursive function to get the total size of a file and its children
+function totalSize(files: FileData[], id: number): number {
+    const file = files.find(f => f.id === id);
+    if (!file) return 0;
+
+    let total = file.size;
+    const children = files.filter(f => f.parent === id);
+
+    children.forEach(child => {
+        total += totalSize(files, child.id);
+    });
+
+    return total;
+}
+
 function largestFileSize(files: FileData[]): number {
     if (files.length === 0) return 0;
-    let parentFiles: ParentFile[] = files.filter(file => file.parent === -1).map(file => ({ id: file.id, totalSize: file.size }));
+    const parents: ParentFile[] = [];
+    const parentFiles = files.filter(file => file.parent === -1);
 
-    // TODO
+    parentFiles.forEach(file => {
+        parents.push({ file, totalSize: totalSize(files, file.id) });
+    });
 
-    return 0;
+    return parents
+        .map(p => p.totalSize)
+        .reduce((a, b) => Math.max(a, b));
 }
 
 
