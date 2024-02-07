@@ -11,20 +11,47 @@ type FileData = {
  * Task 1
  */
 function leafFiles(files: FileData[]): string[] {
-    return [];
+    return files
+        .filter(file1 => files.every(file2 => file1.id !== file2.parent))
+        .map(file => file.name);
 }
 
 /**
  * Task 2
  */
+
+type CategoryData = {
+    name: string,
+    numFiles: number
+};
+
 function kLargestCategories(files: FileData[], k: number): string[] {
-    return [];
+    let categories: CategoryData[] = [];
+    files.forEach(file => {
+        file.categories.forEach(category => {
+            let categoryData = categories.find(c => c.name === category);
+            if (categoryData) {
+                categoryData.numFiles++;
+            } else {
+                categories.push({ name: category, numFiles: 1 });
+            }
+        });
+    });
+
+    return categories.sort((a, b) => {
+            if (a.numFiles > b.numFiles) return -1;
+            if (a.numFiles < b.numFiles) return 1;
+            return a.name.localeCompare(b.name);
+        })
+        .slice(0, k)
+        .map(c => c.name);
 }
 
 /**
  * Task 3
  */
 function largestFileSize(files: FileData[]): number {
+    if (files.length === 0) return 0;
     return 0;
 }
 
