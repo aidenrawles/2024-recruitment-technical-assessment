@@ -50,8 +50,18 @@ function kLargestCategories(files: FileData[], k: number): string[] {
 /**
  * Task 3
  */
+
+type ParentFile = {
+    id: number,
+    totalSize: number
+};
+
 function largestFileSize(files: FileData[]): number {
     if (files.length === 0) return 0;
+    let parentFiles: ParentFile[] = files.filter(file => file.parent === -1).map(file => ({ id: file.id, totalSize: file.size }));
+
+    // TODO
+
     return 0;
 }
 
