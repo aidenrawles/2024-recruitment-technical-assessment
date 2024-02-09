@@ -13,11 +13,12 @@
                         <div class="nav-logo">
                             <img src="assets/unilectives.svg" alt="unilectives" class="links"></img>
                         </div>
+                        <div class="logo-border"></div>
                         <img src="assets/book-open.svg" alt="book" class="links"></img>
                         <img src="assets/shield-check.svg" alt="shield" class="links"></img>
                     </div>
                     <div class="nav-link" id="bottom">
-                        <img src="assets/bars-arrow-up.svg" alt="bars-arrow" class="links"></img>
+                        <img src="assets/bars-arrow-up.svg" alt="bars-arrow" class="links" id="bars-arrow"></img>
                         <img src="assets/user-circle.svg" alt="user" class="links"></img>
                         <img src="assets/moon.svg" alt="moon" class="links"></img>
                         <img src="assets/arrow-right.svg" alt="arrow-right" class="links"></img>
@@ -30,57 +31,164 @@
                     <h2>Your one-stop shop for UNSW course and elective reviews.</h2>
                 </div>
                 <div class="home-search">
-                    <input type="text" placeholder="Search for a course or elective">
-                    <button>Search</button>
-                    <p>Sort by:</p>
-                    <select name="sort" id="sort" placeholder="Sort by">
-                        <option value="rating">Rating</option>
-                        <option value="difficulty">Difficulty</option>
-                        <option value="workload">Workload</option>
-                    </select>
+                    <div class="search">
+                        <img class="glass" src="assets/search.svg" alt="search">
+                        <input class="search-box" type="text" placeholder="Search for a course e.g. COMP1511">
+                    </div>
+                    <div class="sort">
+                        <select class="sort-box" name="sort" placeholder="Sort by"></select>
+                    </div>
                 </div>
                 <div class="course-grid">
                     <div class="course">
-                        <h3>COMP1511</h3>
-                        <p>Introduction to Programming</p>
-                        <p>Rating: ★★★★★</p>
-                        <p>Difficulty: 3.5</p>
-                        <p>Workload: 4.0</p>
+                        <div class="course-heading">
+                            <div class="course-title">
+                                <h3>COMP1511</h3>
+                            </div>
+                            <div class="course-reviews">
+                                <p class="review-stars">★★★★★</p>
+                                <p class="review-numbers">68 reviews</p>
+                            </div>
+                        </div>
+                        <div class="course-body">
+                            <p class="course-desc">Programming Fundamentals</p>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-term">
+                                <p class="term">Term 1</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 2</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 3</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="course">
-                        <h3>COMP1511</h3>
-                        <p>Introduction to Programming</p>
-                        <p>Rating: ★★★★★</p>
-                        <p>Difficulty: 3.5</p>
-                        <p>Workload: 4.0</p>
+                        <div class="course-heading">
+                            <div class="course-title">
+                                <h3>COMP1531</h3>
+                            </div>
+                            <div class="course-reviews">
+                                <p class="review-stars">★★★★★</p>
+                                <p class="review-numbers">47 reviews</p>
+                            </div>
+                        </div>
+                        <div class="course-body">
+                            <p class="course-desc">Software Engineering Fundamentals</p>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-term">
+                                <p class="term">Term 1</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 2</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 3</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="course">
-                        <h3>COMP1511</h3>
-                        <p>Introduction to Programming</p>
-                        <p>Rating: ★★★★★</p>
-                        <p>Difficulty: 3.5</p>
-                        <p>Workload: 4.0</p>
+                        <div class="course-heading">
+                            <div class="course-title">
+                                <h3>COMP1521</h3>
+                            </div>
+                            <div class="course-reviews">
+                                <p class="review-stars">★★★★★</p>
+                                <p class="review-numbers">40 reviews</p>
+                            </div>
+                        </div>
+                        <div class="course-body">
+                            <p class="course-desc">Computer System Fundamentals</p>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-term">
+                                <p class="term">Term 1</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 2</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 3</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="course">
-                        <h3>COMP1511</h3>
-                        <p>Introduction to Programming</p>
-                        <p>Rating: ★★★★★</p>
-                        <p>Difficulty: 3.5</p>
-                        <p>Workload: 4.0</p>
+                        <div class="course-heading">
+                            <div class="course-title">
+                                <h3>COMP2521</h3>
+                            </div>
+                            <div class="course-reviews">
+                                <p class="review-stars">★★★★★</p>
+                                <p class="review-numbers">36 reviews</p>
+                            </div>
+                        </div>
+                        <div class="course-body">
+                            <p class="course-desc">Data Structures and Algorithms</p>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-term">
+                                <p class="term">Summer</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 1</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 2</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 3</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="course">
-                        <h3>COMP1511</h3>
-                        <p>Introduction to Programming</p>
-                        <p>Rating: ★★★★★</p>
-                        <p>Difficulty: 3.5</p>
-                        <p>Workload: 4.0</p>
+                        <div class="course-heading">
+                            <div class="course-title">
+                                <h3>COMP2511</h3>
+                            </div>
+                            <div class="course-reviews">
+                                <p class="review-stars">★★★★★</p>
+                                <p class="review-numbers">33 reviews</p>
+                            </div>
+                        </div>
+                        <div class="course-body">
+                            <p class="course-desc">Object Oriented Design & Programming</p>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-term">
+                                <p class="term">Term 1</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 2</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 3</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="course">
-                        <h3>COMP1511</h3>
-                        <p>Introduction to Programming</p>
-                        <p>Rating: ★★★★★</p>
-                        <p>Difficulty: 3.5</p>
-                        <p>Workload: 4.0</p>
+                        <div class="course-heading">
+                            <div class="course-title">
+                                <h3>COMP3311</h3>
+                            </div>
+                            <div class="course-reviews">
+                                <p class="review-stars">★★★★★</p>
+                                <p class="review-numbers">33 reviews</p>
+                            </div>
+                        </div>
+                        <div class="course-body">
+                            <p class="course-desc">Database Systems</p>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-term">
+                                <p class="term">Term 1</p>
+                            </div>
+                            <div class="course-term">
+                                <p class="term">Term 3</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
