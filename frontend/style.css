@@ -14,11 +14,30 @@
 
 h1 {
     color: var(--title);
+    font-weight: 800;
+    font-size: 54px;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    padding-bottom: 16px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+h3 {
+    margin: 0;
+    padding-top: 16px;
+    font-size: large;
+    font-weight: 800;
+    color: var(--text-colour);
 }
 
 p {
     color: var(--text-colour);
     font-size: small;
+    margin: 0;
 }
 
 body {
@@ -41,7 +60,7 @@ body {
     height: 2px;
     background-color: #e7e9ed;
     align-self: center;
-    width: 40px;
+    width: 36px;
 }
 
 .nav-link {
@@ -81,7 +100,6 @@ body {
     outline: 0px solid transparent;
     border: none;
     color: var(--search-colour);
-    padding: 8px, 16px, 8px, 16px;
     width: 100%;
     background-color: var(--background);
 }
@@ -95,6 +113,17 @@ body {
     display: block;
     padding: 4px;
     fill: var(--search-colour);
+}
+
+.sort-box {
+    border: 1px solid;
+    border-color: var(--review-number);
+    border-radius: 4px;
+    color: var(--review-number);
+    padding: 8px;
+    margin-right: 8px;
+    width: 180px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 .home-container {
@@ -132,7 +161,11 @@ body {
     padding-top: 12px;
     flex-grow: 1;
     background-color: var(--cards);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.course-body {
+    padding-top: 12px;
 }
 
 .course-desc {
@@ -144,17 +177,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.course-title {
-    h3 {
-        margin: 0;
-        padding-top: 16px;
-    }
-
-    font-size: large;
-    font-weight: bold;
-    color: var(--text-colour);
 }
 
 .course-footer {
@@ -175,16 +197,18 @@ body {
 }
 
 .home-title {
+    padding-top: 16px;
+
     h3 {
-        color: black;
+        margin: 0;
     }
 }
 
 .review-stars {
     color: var(--star-colour);
     margin: 0;
-    padding-top: 16px;
-    font-size: large;
+    padding-top: 8px;
+    font-size: 28px;
 }
 
 .review-numbers {
@@ -192,6 +216,7 @@ body {
     font-size: x-small;
     font-weight: lighter;
     color: var(--review-number);
+    padding-left: 4px;
 }
 
 
